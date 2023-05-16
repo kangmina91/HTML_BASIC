@@ -1,0 +1,65 @@
+.header {
+
+    width: 1200px;
+    margin: 0 auto;
+    background: burlywood;
+    line-height: 50px;
+
+}
+
+.header h1,
+h2 {
+    margin: 20px;
+}
+
+.inner {
+    max-width: 1200px;
+    width: 1200px;
+    margin: 0 auto;
+    border: 5px solid #ddd;
+}
+
+.name {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    border-bottom: 5px solid #ddd;
+
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    box-sizing: border-box;
+    list-style: none;
+    border-bottom: 2px dotted #ddd;
+    text-align: center;
+
+}
+
+
+ul strong {
+    color: red;
+
+}
+
+ul .click {
+    padding: 5px 0;
+    list-style: circle;
+    border-bottom: 2px dotted #ddd;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
