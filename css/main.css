@@ -49,11 +49,12 @@ ul strong {
 }
 
 ul .click {
-    padding: 5px 0;
+    padding: 5px;
     list-style: circle;
     border-bottom: 2px dotted #ddd;
     font-weight: bold;
     text-align: left;
+    list-style-position: inside;
 }
 
 
