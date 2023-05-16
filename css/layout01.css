@@ -1,0 +1,162 @@
+h1 {
+    margin: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    margin: 50px 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background: yellow;
+
+}
+
+.itm {
+    background: tomato;
+    color: #fff;
+    text-align: center;
+    outline: 1px solid black;
+
+}
+
+
+.case01 {
+    display: flex;
+    gap: 30px;
+    /* gap 박스 사이를 띄어놓는 용도 */
+}
+
+.case02 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.case03 {
+    display: flex;
+}
+
+.case03 .right {
+    margin: 0 0 0 auto;
+    /* 마진 왼쪽에 오토를 주면 아이템은 오른쪽으로 밀리게 되는 거임 */
+}
+
+.case03 .right2 {
+    margin: 0 0 0 100px;
+    /* 오른쪽은 마진이 0이고 왼쪽에 마진 100px를 준거임 */
+}
+
+
+.top_bar {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    /* 위아래 줄 그어줌 1픽셀씩 위아래 추가되어 줄그어진다는 소리이기도함 */
+
+}
+
+.top_bar .inner {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    /* 공식 */
+
+    line-height: 30px;
+    /* 위아래 줄 높이 정하는 속성으로 상속받는 특성이 있음 */
+}
+
+
+.top_bar .customer {
+    display: flex;
+    margin: 0 0 0 auto;
+}
+
+.top_bar .customer li {
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    /* 원래 높이 안주는게 원칙인데 flex 쓰고 나서부터 높이를 주게 되었음;;  */
+    background: #f9f9f9;
+}
+
+#header .inner {
+    display: flex;
+    /* 플렉스 쓰는 순간 요소들이 쪼그라들며 모이는거임 */
+    width: 1200px;
+    /* 보통 가로 너비는 1200px가 공식임 */
+    margin: 0 auto;
+    /* 이건 중앙에 오는 공식임. 마진 좌우 오토 주면 중앙에 오는 거임 */
+    align-items: center;
+    /* 디스플레이 아이템 세로축 가운데 정렬 */
+
+}
+
+/* #header * {
+    outline: 1px solid #000;
+} */
+
+#header h1 {
+    text-align: left;
+    /* 인라인 요소 왼쪽으로 정렬시킴. */
+    margin: 0;
+    /* 위에 써놓은 h1의 margin이 적용되어버리는 바람에 여기서는 마진 0쓴거임 영향을 안 받으려고 */
+}
+
+#header .gnb {
+    margin: 0 0 0 auto;
+}
+
+#header .right {
+    margin: 0 0 0 50px;
+    color: tomato;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+#header .gnb>ul {
+    display: flex;
+    /* 내가 가로 배치할 li요소의 부모인 ul에게 디스플레이 플렉스를 걸어준다 */
+    gap: 40px;
+    /* 메뉴 간 거리 유지 */
+}
+
+/* 메뉴 사이 bar 만드는 법 */
+#header .gnb>ul>li {
+    position: relative;
+}
+
+#header .gnb>ul>li~li::before {
+    content: "";
+    position: absolute;
+    /* 포지션을 써도 박스가 된다 */
+    top: 50%;
+    left: -20px;
+    transform: translate(-50%, -50%);
+    /* 중앙에 오는 공식 */
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+}
+
+/* ~ 형제 선택자로 하면 자기 자신(맨앞)은 빠짐 */
+
+
+/* #header .gnb>ul>li:nth-child(1)::before {
+    display: none;
+    
+}  */
+/* nth-child 여러개 쓰는 건 모양새가 안산다고 함 ;; */
