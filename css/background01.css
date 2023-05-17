@@ -1,0 +1,47 @@
+body {
+    height: 200vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.bg00 {
+    height: 400px;
+    background: url(../images/mainvisual03.jpg) no-repeat fixed center center/cover;
+}
+
+.bg01 {
+    height: 500px;
+    background: url(../images/grafflogo.png);
+    background-repeat: no-repeat;
+    /* 반복 안함 */
+    /* background-size: cover; */
+    background-position: center center;
+    /* x, y 축 */
+}
+
+
+.bg02 {
+    height: 400px;
+    background: url(../images/mainvisual01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* x, y 축 */
+    background-attachment: fixed;
+}
+
+
+
+.bg03 {
+    filter: grayscale(1);
+    height: 400px;
+    background: url(../images/mainvisual01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* x, y 축 */
+    background-attachment: fixed;
+}

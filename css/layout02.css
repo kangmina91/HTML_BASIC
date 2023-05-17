@@ -1,0 +1,234 @@
+h1.tit {
+    /* tit이라는 클래스명을 가진 h1 */
+    margin: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    margin: 50px 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background: yellow;
+
+}
+
+.itm {
+    background: tomato;
+    color: #fff;
+    text-align: center;
+}
+
+/* .case01 {overflow: hidden;} */
+/* 플롯을 가라앉히는 방법! 부모 요소에 overflow: hidden; 을 줘보자. 조금 위험한 요소가 있긴 함.
+    정확한 작동 원리를 모르지만 부모 요소를 넘어가는 것들을 카바칠 때 쓰더라. */
+
+/* claerfix */
+.clearfix::after {
+    /* cleadrfix 라는 클래스명을 가진 div들에게 가상 요소 적용 - after는 요소 맨 뒤에 */
+    content: "";
+    display: block;
+    /* 박스 요소여야 작동하더라 */
+    clear: both;
+}
+
+.case01>div {
+    /* case01 이라는 클래스명 안에 있는 div 요소들 */
+    float: left;
+    /* 가로 배치는 되지만 떠오르는 특성 - 부모의 높이를 없애버린다 */
+    /* 그럼 어떻게 부모 높이를 회복할까? clearfix! */
+}
+
+
+/* float 오른쪽 배치 - float: right; 순서가 뒤바뀌는 문제 */
+.case02>div {
+    float: right;
+}
+
+.case03 {
+    text-align: center;
+    font-size: 0;
+    /* 요소 간 갭을 없애기 위해 font-size:0; 을 주면 자식 요소들에게도 그대로 상속된다. 
+    결과적으로 자식 요소의 높이가 사라지므로 자식 요소 내에서 폰트 사이즈를 다시 지정해주도록 한다. */
+}
+
+.case03>div {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.case04 .left {
+    float: left;
+}
+
+.case04 .right {
+    float: right;
+}
+
+.case04 .right>div {
+    float: left;
+}
+
+.case04 .right .s {
+    margin: 0 0 0 100px;
+}
+
+.stitle {
+    text-align: left;
+    width: 1200px;
+    /* margin: 0 auto; */
+    margin: 50px auto 20px auto;
+}
+
+.stitle i {
+    float: right;
+    padding: 5px;
+    background: #333;
+    color: #fff;
+    border-radius: 50%;
+    /* 50% 는 동그라미 만들어줌 */
+    font-size: 10px;
+    /* 역시 float이라 크기가 커지면 부모 요소 빠져나옴 */
+}
+
+/* float으로 상단 바랑 메뉴 만들기! */
+.top_bar {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    line-height: 30px;
+}
+
+.top_bar .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.top_bar .inner .slogan {
+    float: left;
+}
+
+.top_bar .inner .customer {
+    float: right;
+}
+
+.top_bar .inner .customer li {
+    float: left;
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+}
+
+#header {
+    background: #f9f9f9;
+    /* 원래 헤더에 배경 주면 안됩니다! */
+}
+
+#header .inner {
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 100px;
+    /* line-height 는 상속 받는다 */
+}
+
+#header h1 {
+    float: left;
+}
+
+#header .service {
+    float: right;
+}
+
+#header .service>* {
+    float: left;
+}
+
+
+#header .service .gnb {
+    float: left;
+
+}
+
+#header .service .gnb>ul>li {
+    position: relative;
+    float: left;
+
+
+}
+
+#header .service .gnb>ul>li a {
+    display: block;
+    padding: 0 20px;
+    /* a는 인라인 요소라서 마진패딩 작동안함??? 간격을 주려면 박스로 만들자 */
+
+}
+
+#header .service .gnb>ul>li~li::before {
+    content: "";
+    position: absolute;
+    /* 포지션을 써도 박스가 된다 */
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    /* 중앙에 오는 공식 */
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+}
+
+
+#header .service .right {
+    float: left;
+    margin: 0 0 0 30px;
+
+}
+
+#event {
+    padding: 100px 0;
+    /* 가장  */
+}
+
+#event h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+#event p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+#event .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#event .inner figure {
+    float: left;
+    /* 이미지 사이즈가 커지면 옆으로 가지 않고 밑으로 내려감 */
+    width: 33.333333333%;
+    /* 인라인 요소는 겹침... */
+    padding: 0 15px;
+}
+
+#event .inner figure img {
+    width: 100%;
+    /* 이미지 사이즈를 부모 요소에 맞추기 */
+    height: 370px;
+    /* 높이를 주는 방법은 보통 안씀 */
+    object-fit: cover;
+    /* 이미지 찌그러지지 않게 사이즈 맞추기 */
+
+
+}

@@ -1,4 +1,4 @@
-h1 {
+h1.tit {
     margin: 50px;
     font-size: 30px;
     font-weight: 700;
@@ -53,6 +53,12 @@ h2 {
 .case03 .right2 {
     margin: 0 0 0 100px;
     /* 오른쪽은 마진이 0이고 왼쪽에 마진 100px를 준거임 */
+}
+
+.case04 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 
@@ -160,3 +166,47 @@ h2 {
     
 }  */
 /* nth-child 여러개 쓰는 건 모양새가 안산다고 함 ;; */
+
+
+#event {
+    padding: 100px 0;
+    /* 가장  */
+}
+
+#event h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+#event p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+#event .inner {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#event .inner figure {
+    flex: 1;
+    /* 한칸씩 차지해라 */
+}
+
+#event .inner figure img {
+    width: 100%;
+    /* 이미지 사이즈를 부모 요소에 맞추기 */
+    height: 370px;
+    /* 높이를 주는 방법은 보통 안씀 */
+    object-fit: cover;
+    /* 이미지 찌그러지지 않게 사이즈 맞추기 */
+
+
+}
