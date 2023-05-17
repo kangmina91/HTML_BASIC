@@ -1,9 +1,12 @@
 .header {
 
     width: 1200px;
-    margin: 0 auto;
+    margin: 10px auto;
     background: burlywood;
     line-height: 50px;
+
+    border: 5px solid #ddd;
+    box-sizing: border-box;
 
 }
 
@@ -16,7 +19,10 @@ h2 {
     max-width: 1200px;
     width: 1200px;
     margin: 0 auto;
+    padding: auto;
     border: 5px solid #ddd;
+    box-sizing: border-box;
+
 }
 
 .name {
@@ -42,6 +48,10 @@ ul {
 
 }
 
+ul li {
+    padding: 5px 10px;
+}
+
 
 ul strong {
     color: red;
@@ -49,7 +59,6 @@ ul strong {
 }
 
 ul .click {
-    padding: 5px;
     list-style: circle;
     border-bottom: 2px dotted #ddd;
     font-weight: bold;
