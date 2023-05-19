@@ -1,0 +1,55 @@
+/* .popup_parent {
+    position: relative;
+    background: blue;
+} */
+
+.popup {
+    position: absolute;
+    /* position 떠오른다 찌그라 든다 기준이 없다  */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: tomato;
+    width: 300px;
+    z-index: 1;
+    /* 기본으로 1 지정하면 순서대로 쌓임 */
+}
+
+.popup2 {
+    position: absolute;
+    /* position 떠오른다 찌그라 든다 기준이 없다  */
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: tomato;
+    width: 300px;
+    z-index: 1;
+
+}
+
+
+.popup3 {
+    position: absolute;
+    /* position 떠오른다 찌그라 든다 기준이 없다  */
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background: tomato;
+    width: 300px;
+    z-index: 1;
+}
+
+
+img {
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+.btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
