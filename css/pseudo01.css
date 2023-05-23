@@ -1,0 +1,270 @@
+h1.tit {
+    /* tit이라는 클래스명을 가진 h1 */
+    margin: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    margin: 50px 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background: yellow;
+
+}
+
+.itm {
+    background: tomato;
+    color: #fff;
+    text-align: center;
+}
+
+.sec {
+    padding: 100px 0;
+}
+
+.bg {
+    background: #f9f9f9;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.sc01 h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.sc01 h3::before {
+    content: "앞";
+    margin: 0 100px 0 0;
+}
+
+.sc01 h3::after {
+    content: "뒤";
+}
+
+.sc02 h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+/* 부모자식간에도 마진이 겹친다  */
+/* 박스와 박스를 떨어뜨릴 데 마진은 쓰긴하기는데 
+이때 마진은 아래에만 주고 마지막 박스에는 마진을 주지 않는다. */
+
+.sc02 h3::before {
+    content: "";
+    display: block;
+    /* width: 1px;
+    height: 100px; */
+    width: 100px;
+    height: 1px;
+    background: black;
+    margin: 30px auto;
+}
+
+
+/* 가상요소로 세로선 긋기 */
+.sc02 h3::after {
+    content: "";
+    display: block;
+    /* width: 1px;
+    height: 100px; */
+    width: 100px;
+    height: 1px;
+    background: black;
+    margin: 30px auto;
+}
+
+/* 가상요소, 인라인 블록을 사용해서 양쪽으로 가로선 줄긋기 */
+.sc03 h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.sc03 h3::before {
+    content: "";
+    display: inline-block;
+    vertical-align: 10px;
+    width: 100px;
+    height: 1px;
+    background: tomato;
+    margin: 0 10px;
+}
+
+.sc03 h3::after {
+    content: "";
+    display: inline-block;
+    vertical-align: 10px;
+    width: 100px;
+    height: 1px;
+    background: tomato;
+    margin: 0 10px;
+}
+
+
+/* 양쪽을 가득 채우는 가로 선 긋기 flex */
+.sc04 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.sc04 h3::before {
+    content: "";
+    /* flex: 1; */
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: tomato;
+}
+
+/* width 쓰면 선 사이즈 만들수있고/ flex:1 쓰면 스트래치 */
+.sc04 h3::after {
+    content: "";
+    /* flex: 1;*/
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: tomato;
+}
+
+
+/* 점 찍고 아이콘 넣는 법 */
+.sc05 .dot {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    line-height: 1.4;
+}
+
+.sc05 .dot>li {
+    position: relative;
+    padding: 0 0 0 20px;
+}
+
+/* 아이콘에 검사창 띄우고 아이콘 이름 알아와서 콘텐츠에 쓰고 폰트 패밀리 지정해주기 */
+.sc05 .dot>li::before {
+    content: "\e921";
+    font-family: xeicon;
+    font-size: 3px;
+    color: tomato;
+
+    /* 글자 위치랑 아이콘 위치 맞춰주기 */
+    position: absolute;
+    top: 6px;
+    left: 0;
+
+    margin: 0 10px 0 0;
+
+    /* 점 찍기 */
+    /* 
+    content: ".";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: tomato;
+    vertical-align: middle;
+    */
+}
+
+/* 가상요소로 이미지 넣기 */
+.sc06 .img>li::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/lesedilarona01.jpg) no-repeat center center/cover;
+    margin: 0 20px 0 0;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* date-title 내용 불러오기 */
+.sc07 .inner>li::before {
+    /* content: "step01"; */
+    content: attr(data-title);
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    background: tomato;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.sc07 .inner>li::after {
+    content: "new";
+    position: absolute;
+    right: -20px;
+    bottom: 50px;
+    border-top: 10px solid tomato;
+    border-bottom: 10px solid tomato;
+    border-left: 20px solid tomato;
+    border-right: 20px solid transparent;
+    height: 0;
+    width: 60px;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+
+    line-height: 0;
+    text-indent: -10px;
+}
+
+
+/* 그리드로 데이터 스텝 박스 세개 한줄씩 만들기 */
+.sc07 .inner {
+    position: relative;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* 그리드 반응형 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.sc07 .inner::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.sc07 .inner>* {
+    position: relative;
+    border: 1px solid tomato;
+    padding: 30px;
+    background: #f9f9f9;
+}

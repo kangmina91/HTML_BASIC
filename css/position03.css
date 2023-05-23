@@ -51,6 +51,52 @@
     transform: rotate(180deg);
 }
 
+
+
+
+
+.down_banner {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    /* 위치를 지정. 꼭대기에 붙이고 left 0과 right 0을 주니 박스가 퍼지더라 탑과바텀도 마찬가지*/
+    background: tomato;
+    height: 200px;
+    width: 400px;
+    transition: 0.5s;
+    /* 글자가 들어간 박스. 높이를 주지 않으면 아예 뜨지 않는다 */
+}
+
+.down_banner.on {
+    height: 0;
+}
+
+.down_banner .btn {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    color: black;
+    background: blue;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.down_banner .btn::after {
+    content: "아래";
+}
+
+.down_banner.on .btn::after {
+    content: "위";
+}
+
+.down_banner.on .btn i {
+    transform: rotate(180deg);
+}
+
+
+
+
 .right_banner {
     position: fixed;
     top: 50%;
