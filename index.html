@@ -11,11 +11,39 @@
     <title>html basic</title>
 </head>
 
+<style>
+    hr {
+        position: relative;
+        border: none;
+        border-top: 1px solid #ddd;
+        overflow: visible;
+    }
+
+    hr::before {
+        content: "\ea10";
+        font-family: xeicon;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        padding: 10px;
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        background: #fff;
+    }
+</style>
+
 <body>
     <header class="header">
         <h1>HTML BASIC - 처음배우는 HTML</h1>
     </header>
     <div class="inner">
+
+        <hr>
+        <i class="xi-heart"></i>
+
         <h2 class="name">강미나</h2>
 
         <ul class="order">
@@ -24,6 +52,8 @@
             <li> <strong> 1. reset (web font, web icon)</strong><i class="xi-check-min"></i></li>
             <li> <strong> 2. jquery, slick</strong><i class="xi-check-min"></i></li>
         </ul>
+
+
         <ul>
             <li class="click">
                 <a href="./doc/01_display.html" target="_blank">요소의 가로배치 01 - display: flex : 23.05.16</a>
@@ -37,9 +67,10 @@
                 <p>디스플레이 플렉스는 플렉스 콘테이너 내부의 자식 요소들 이른바 아이템 배치를 건들 수 있다.</p>
                 <p>case03의 경우에는 margin을 이용해서 아이템 간의 거리를 줬다.</p>
 
-
             </li>
         </ul>
+
+
         <ul>
             <li class="click">
                 <a href="./doc/02_float.html" target="_blank">요소의 가로배치 02 - float : 23.05.17</a>
@@ -110,6 +141,7 @@
 
 
 
+
         <ul>
             <li class="click"><a href="./doc/mainVisual01.html" target="_blank">메인비주얼 반응형 슬라이드 - slick : 23.05.17</a>
             </li>
@@ -129,6 +161,26 @@
             <li class="click"><a href="./doc/product01.html" target="_blank"> 제품 슬라이드 slider - content : 23.05.19</a>
             </li>
         </ul>
+
+        <ul>
+            <li class="click"><a href="./doc/tab01.html" target="_blank"> Tab menu 01 - display : none, block 으로 공간을
+                    제어한다.- : 23.05.25</a>
+            </li>
+        </ul>
+        <ul>
+            css layout - header part
+            <li class="click"><a href="./doc/header02.html" target="_blank"> 모바일까지 되는 기본 메뉴 : 23.05.26</a></li>
+            <li class="click"><a href="./doc/header03.html" target="_blank"> 다단메뉴 기본 - 디스플레이 논, 블락을 사용 : 23.05.26</a>
+            </li>
+            <li class="click"><a href="./doc/header04.html" target="_blank"> 다단메뉴 애니메이션 적용시키기 - 높이를 없앴다가 hover를 이용해 높이를
+                    만들기
+                    : 23.05.26</a></li>
+            <li>
+                진정한 헤더란...
+            </li>
+        </ul>
+
+
 
 
 
@@ -151,8 +203,8 @@
 
 
         <ul>
-            <li class="click"><a href="./doc/slick_main_animation01" target="_blank"> 슬라이드 애니메이션 효과 slick animation :
-                    23.05.23</a></li>
+            <li class="click"><a href="./doc/slick_main_animation01.html" target="_blank"> 슬라이드 애니메이션 효과 slick animation
+                    : 23.05.23</a></li>
             <li>슬라이드 시에 애니메이션 효과 시작 및 넘버/모델명 등을 보여줄 수 있다. </li>
         </ul>
 

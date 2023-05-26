@@ -1,0 +1,63 @@
+/* 헤더 메뉴 기준을 잡자!! */
+#header .gnb>ul>li {
+    position: relative;
+
+}
+
+/* 서브 메뉴 열심히 만들고 높이를 없앰-애니메이션 쓸 때 */
+#header .sub {
+    height: 0;
+    overflow: hidden;
+
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+
+    text-align: center;
+    width: 100%;
+    line-height: 40px;
+
+    transition: 0.5s;
+}
+
+/* 마우스 갖다대니 서브 메뉴 한꺼번에 등장!! */
+#header .gnb:hover>ul>li .sub {
+    height: 200px;
+}
+
+
+#header .gnb {
+    /* position: relative; */
+}
+
+
+/* 다단 메뉴 영역 */
+#header .gnb::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    /* height: 200px; */
+    height: 0;
+    border-top: 1px solid #ddd;
+
+
+    background: #fff;
+    z-index: 999;
+
+    transition: 0.5s;
+}
+
+/* 마우스 갖다댈 때 높이 생기게 하기 */
+#header .gnb:hover::before {
+    height: 200px;
+}
+
+
+/* 맨앞에 있는 놈 빼고 위에 줄 그어주자 */
+/* #header .sub>li~li {
+    border-top: 1px solid #ddd;
+} */
