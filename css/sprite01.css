@@ -1,0 +1,109 @@
+.tit {
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+
+
+
+#header .service i {
+    position: relative;
+    font-size: 25px;
+}
+
+#header .service i small {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: tomato;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 50%;
+    font-size: 10px;
+
+}
+
+
+.mainVisual {
+    height: calc(100vh - 200px);
+    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.mainLink .link {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+
+    margin: -100px auto 0 auto;
+}
+
+.mainLink .link li:nth-child(1) a {
+    width: 100px;
+    height: 100px;
+    background: url(../images/icon_set_w.png) 0 0;
+}
+
+.mainLink .link li:nth-child(1) {
+    background: #DA544B
+}
+
+.mainLink .link li:nth-child(2) a {
+    width: 100px;
+    height: 100px;
+    background: url(../images/icon_set_w.png) -100px 0;
+}
+
+.mainLink .link li:nth-child(2) {
+    background: #F4CB4F
+}
+
+.mainLink .link li:nth-child(3) a {
+    width: 100px;
+    height: 100px;
+    background: url(../images/icon_set_w.png) -200px 0;
+}
+
+.mainLink .link li:nth-child(3) {
+    background: #337689
+}
+
+.mainLink .link li:nth-child(4) a {
+    width: 100px;
+    height: 100px;
+    background: url(../images/icon_set_w.png) -300px 0;
+}
+
+.mainLink .link li:nth-child(4) {
+    background: #6FA476
+}
+
+
+.mainLink .link li {
+    flex: 1;
+    height: 180px;
+
+    transition: 0.5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainLink .link li:not(.customer):hover {
+    height: 200px;
+}
+
+.mainLink .link .customer {
+    flex: 2;
+    background: #F6F6F6;
+}
+
+.mainVisual .bh {
+    width: 100px;
+    height: 100px;
+    background: url(../images/icon_set_w.png);
+    transition: 0.5s;
+}

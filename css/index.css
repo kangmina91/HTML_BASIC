@@ -23,58 +23,80 @@
     font-weight: 800;
 }
 
+.sec {
+    padding: 50px 0;
+}
 
 .inner {
     max-width: 1200px;
     margin: 0 auto;
-    border: 5px solid #ddd;
+    border: 2px solid #888;
     box-sizing: border-box;
-
-}
-
-.inner h2.name {
-    padding: 5px 0;
 }
 
 .name {
+    display: block;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 800;
-    border-bottom: 5px solid #ddd;
+    border-bottom: 2px solid #888;
+    padding: 10px 0;
 }
-
-
 
 ul {
-    border-bottom: 2px dotted #ddd;
     text-align: center;
 }
 
-
-ul li {
-    padding: 10px 10px;
+ul.order li {
+    text-align: center;
+    list-style: none;
 }
 
-
 ul.order li strong {
+
     color: red;
     font-weight: 500;
 }
 
-
-ul .click {
+ul li {
+    padding: 10px 10px;
     list-style: circle;
-    border-bottom: 2px dotted #ddd;
-    font-weight: bold;
+
+    font-weight: 500;
     text-align: left;
     list-style-position: inside;
+
 }
 
-ul>p.mtit {
-    font-weight: bold;
-    padding: 20px 0;
+ul li:hover {
+    font-weight: 700;
 }
 
-ul>li>p {
-    padding: 5px 0;
+ul li:not(:last-child) {
+    border-bottom: 2px dotted #ddd;
+}
+
+ul li span {
+    display: block;
+    line-height: 1.5;
+    text-align: left;
+    font-weight: 400;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+
+
+ul .title {
+    display: block;
+    font-size: 20px;
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    padding: 15px 0;
+
+}
+
+
+.show {
+    display: block;
 }
